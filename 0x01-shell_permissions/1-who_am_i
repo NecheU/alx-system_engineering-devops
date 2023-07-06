@@ -1,2 +1,2 @@
 #!/bin/bash
-wh_am_i
+whoami

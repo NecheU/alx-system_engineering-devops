@@ -2,8 +2,7 @@
 # This program will print "Best School" using while loop
 
 loop_counter=0
-while  [ $loop_counter -le 10 ]
-do
+while  [ $loop_counter -le 10 ]; do
 	echo "Best School"
 	((loop_counter++))
 done

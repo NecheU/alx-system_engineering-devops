@@ -1,0 +1,6 @@
+#!/bin/bash
+# This displays first name of a contents of a file
+
+for b in *; do
+	echo "$b" | cut -d  '-' -f2
+done

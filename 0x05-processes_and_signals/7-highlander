@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script to display @7-highlander"
+# with sleep 2 in between
+
+trap 'echo "I am invisible!!!"' SIGTERM
+
+while true; do
+	echo "To  infinity and beyond"
+	sleep 2
+done

@@ -1,7 +1,0 @@
-#!/bin/bash
-# This displays first name of a contents of a file
-
-b=$(ls)
-for b in $b; do
-	echo "$b" | cut -d  '-' -f2
-done

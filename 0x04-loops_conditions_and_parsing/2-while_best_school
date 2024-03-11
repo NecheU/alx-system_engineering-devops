@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# This program will print "Best School" using while loop
-
-loop_counter=1
-while  [ $loop_counter -le 10 ]; do
-	echo "Best School"
-	((loop_counter++))
-done

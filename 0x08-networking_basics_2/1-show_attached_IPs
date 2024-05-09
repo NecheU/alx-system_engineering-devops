@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# Bash script to print IP address on a computer it is ran
-
-ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | sort -u

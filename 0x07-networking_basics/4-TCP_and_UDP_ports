@@ -1,0 +1,14 @@
+#!/bin/bash
+#Bash script to display the listening ports:
+#That only shows listening sockets
+#That shows the PID and name of the 
+#program to which each socket belongs
+
+netstat -tuln | grep LISTEN | awk '{print $4}' | while read line
+do
+port=$(echo $line | awk -F: '{print $2}')
+pid=$(lsof -i :$port | awk 'NR==2 {print $2'})
+program=$(ps -p $pid -o comm=)
+
+echo "port: $port | PID: $pid | program: $program"
+done

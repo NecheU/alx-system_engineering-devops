@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Bash script to print IP address on a computer it is ran
+#Bash script that displays all active IPv4 IPs on the machine it’s executed on.
 
-ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | sort -u
+ifconfig | grep -oP '(?<=inet\s)\d+(\. \d+){3}' | sort -u

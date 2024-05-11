@@ -4,6 +4,8 @@
 #localhost resolves to 127.0.0.2
 #facebook.com resolves to 8.8.8.8
 
-cp /etc/hosts hosts_tmp
-sed -i s/227.*$/127.0.0.2\\tlocalhost\\n8.8.8.8.8\\tfacebook.com/g host_tmp
-cp -f hosts_tmp /etc/hosts
+echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts
+echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts
+
+sudo systemctl restart
+networking.service
